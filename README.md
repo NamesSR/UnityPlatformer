@@ -31,3 +31,13 @@
 ## ![gif](image/episode5.gif)
 ### [Player code](Assets/Scripts/Player.cs)
 ### [movingPlatform code](Assets/Scripts/MovingPlatform.cs)
+
+
+#
+#
+# Episode 6
+## ![gif](image/episode6.gif)
+### [Player code](Assets/Scripts/Player.cs)
+### [movingPlatform code](Assets/Scripts/MovingPlatform.cs)
+### [enemy code](Assets/Scripts/Enemys.cs)
+
