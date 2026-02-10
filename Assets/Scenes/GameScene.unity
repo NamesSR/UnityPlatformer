@@ -306,6 +306,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  extraJumpsValue: 1
 --- !u!95 &70796709
 Animator:
   serializedVersion: 7
