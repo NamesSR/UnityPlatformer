@@ -16,3 +16,10 @@
 # Episode 3
 ## ![gif](image/episode3.gif)
 ### [Player code](Assets/Scripts/Player.cs)
+
+
+#
+#
+# Episode 4
+## ![gif](image/episode4.gif)
+### [Player code](Assets/Scripts/Player.cs)

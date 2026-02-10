@@ -1,7 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int Health = 100;
     public float Movepeed = 5f;
     public float jumpforce = 10f;
     public Transform groundCheck;
@@ -12,7 +14,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
 
     private Animator animator;
-
+    private SpriteRenderer spriterenderer;
     public int extraJumpsValue = 1;
     private int extraJumps;
 
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriterenderer = GetComponent<SpriteRenderer>();    
         extraJumps = extraJumpsValue;
     }
 
@@ -79,5 +82,31 @@ public class Player : MonoBehaviour
                 animator.Play("Player_fall");
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "damage")
+        {
+            Health -= 25;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpforce);
+            StartCoroutine(blinkRed());
+
+            if(Health <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    private IEnumerator blinkRed()
+    {
+        spriterenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        spriterenderer.color = Color.white;
+    }
+    private void Die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
 }
