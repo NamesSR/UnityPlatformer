@@ -41,3 +41,14 @@
 ### [movingPlatform code](Assets/Scripts/MovingPlatform.cs)
 ### [enemy code](Assets/Scripts/Enemys.cs)
 
+
+#
+#
+# Episode 7
+## ![gif](image/episode7.gif)
+### [Player code](Assets/Scripts/Player.cs)
+### [movingPlatform code](Assets/Scripts/MovingPlatform.cs)
+### [enemy code](Assets/Scripts/Enemys.cs)
+
+
+
